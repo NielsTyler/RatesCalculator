@@ -10,5 +10,6 @@ namespace RatesCalculator.Models
         public Customer Person { get; set; }
         public Agreement Agreement { get; set; }
         public decimal InterestRateDelta { get; set; }
+        public decimal NewInterestRateDelta { get; set; }
     }
 }

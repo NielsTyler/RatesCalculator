@@ -6,18 +6,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomersDataRepository.DBContext
+namespace RatesCalculator.DAL.Persistence.DBContext
 {
-    public class CustomersRatesContext: DbContext
+    public class RatesCalculatorContext : DbContext
     {
-        public CustomersRatesContext() : base("RatesCalculatorDB")
+        public RatesCalculatorContext () : base("RatesCalculatorContext")
         {
-            Database.SetInitializer(new CustomerRatesInitializer());
-            //Database.SetInitializer(new DropCreateDatabaseAlways<CustomersRatesContext>());
+            Database.SetInitializer(new RatesCalculatorInitializer());
+            //Database.SetInitializer(new DropCreateDatabaseAlways<RatesCalculatorContext >());
         }
 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Agreement> Agreements { get; set; }
+
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{

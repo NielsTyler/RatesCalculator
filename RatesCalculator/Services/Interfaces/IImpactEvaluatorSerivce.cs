@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RatesCalculator.Services.Interfaces
 {
-    interface IRatesCalculationSerivce
+    public interface IImpactEvaluatorSerivce
     {
         decimal CalculateInterestRate(decimal basicRate, decimal margin);
     }

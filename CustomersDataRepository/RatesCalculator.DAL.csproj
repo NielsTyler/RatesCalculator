@@ -51,9 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persistence\Repositories\BaseRepository.cs" />
     <Compile Include="Persistence\Repositories\CustomerRepository.cs" />
-    <Compile Include="DBContext\CustomerRatesInitializer.cs" />
-    <Compile Include="DBContext\CustomersRatesContext.cs" />
+    <Compile Include="Persistence\DBContext\RatesCalculatorInitializer.cs" />
+    <Compile Include="Persistence\DBContext\RatesCalculatorContext.cs" />
     <Compile Include="Interfaces\IAgreementRepository.cs" />
     <Compile Include="Interfaces\ICustomerRepository.cs" />
     <Compile Include="Models\Agreement.cs" />

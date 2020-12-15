@@ -1,4 +1,5 @@
 ﻿using RatesCalculator.DAL.Models;
+using RatesCalculator.DAL.Interfaces;
 using RatesCalculator.Models;
 using RatesCalculator.Services.Interfaces;
 using System;
@@ -13,10 +14,13 @@ namespace RatesCalculator.Controllers
     public class RatesController : ApiController
     {
         //private List<Agreement> agreements = new List<Agreement>();
-        private readonly IRatesCalculationSerivce _ratesCalculationSerivce;
+        private readonly IImpactEvaluatorSerivce _ratesCalculationSerivce;
+        private readonly ICustomerRepository _customerRepository;
 
-        public RatesController()
-        {            
+        public RatesController(ICustomerRepository customerRepository, IImpactEvaluatorSerivce ratesCalculationSerivce)
+        {
+            _customerRepository = customerRepository;
+            _ratesCalculationSerivce = ratesCalculationSerivce;
         }
 
         //[HttpGet]
@@ -37,9 +41,12 @@ namespace RatesCalculator.Controllers
         }
 
         [HttpGet]
-        public String Get()
+        public List<DAL.Models.Customer> Get()
         {
-            return "Hello";
+            List<DAL.Models.Customer> lst = _customerRepository.List();
+            Console.WriteLine(lst.Count);
+
+            return lst;
         }
     }
 }

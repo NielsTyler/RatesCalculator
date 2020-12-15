@@ -17,7 +17,7 @@ namespace RatesCalculator.Tests.Controllers
         public void Get()
         {
             // Arrange
-            RatesController controller = new RatesController();
+            //RatesController controller = new RatesController();
 
             // Act
             //IEnumerable<string> result = controller.Get();
@@ -33,7 +33,7 @@ namespace RatesCalculator.Tests.Controllers
         public void GetById()
         {
             // Arrange
-            RatesController controller = new RatesController();
+            //RatesController controller = new RatesController();
 
             // Act
             //string result = controller.Get(5);
@@ -46,7 +46,7 @@ namespace RatesCalculator.Tests.Controllers
         public void Post()
         {
             // Arrange
-            RatesController controller = new RatesController();
+            //RatesController controller = new RatesController();
 
             // Act
             //controller.Post("value");
@@ -58,7 +58,7 @@ namespace RatesCalculator.Tests.Controllers
         public void Put()
         {
             // Arrange
-            RatesController controller = new RatesController();
+            //RatesController controller = new RatesController();
 
             // Act
             //controller.Put(5, "value");
@@ -70,7 +70,7 @@ namespace RatesCalculator.Tests.Controllers
         public void Delete()
         {
             // Arrange
-            RatesController controller = new RatesController();
+            //RatesController controller = new RatesController();
 
             // Act
             //controller.Delete(5);

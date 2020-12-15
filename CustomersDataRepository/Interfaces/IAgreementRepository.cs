@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomersDataRepository.Interfaces
+namespace RatesCalculator.DAL.Interfaces
 {
     interface IAgreementRepository
     {
