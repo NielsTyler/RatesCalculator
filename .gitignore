@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/RatesCalculator.Tests/obj/Debug
+/RatesCalculator.Tests/bin/Debug
+*.EXE
+/RatesCalculator/bin
+/RatesCalculator/obj/Debug
+/RatesCalculator/packages
+/RatesCalculator/.vs/RatesCalculator/v16
+/CustomersDataRepository/bin/Debug
+/CustomersDataRepository/obj/Debug
