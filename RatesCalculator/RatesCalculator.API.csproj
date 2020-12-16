@@ -196,11 +196,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Agreement.cs" />
-    <Compile Include="Models\ChangedRateInfo.cs" />
-    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Services\Helpers\ApiHelper.cs" />
+    <Compile Include="Services\BaseRateValueExtractor.cs" />
+    <Compile Include="Services\Interfaces\IBaseRateValueExtractor.cs" />
+    <Compile Include="Services\ResultModels\AgreementInfo.cs" />
+    <Compile Include="Services\ResultModels\ChangedRateInfo.cs" />
+    <Compile Include="Services\ResultModels\PersonInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Interfaces\IChangedRateImpactEvaluator.cs" />
     <Compile Include="Services\Interfaces\IRatesCalculationSerivce.cs" />
+    <Compile Include="Services\ChangedRateImpactEvaluator.cs" />
+    <Compile Include="Services\RatesCalculationSerivce.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />

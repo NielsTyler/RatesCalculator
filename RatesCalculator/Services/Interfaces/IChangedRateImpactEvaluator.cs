@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace RatesCalculator.Services.Interfaces
 {
-    public interface IImpactEvaluatorSerivce
+    public interface IChangedRateImpactEvaluator
     {
-        decimal CalculateInterestRate(decimal basicRate, decimal margin);
+        decimal CalculateInterestRate(decimal basicRateValue, decimal margin);
     }
 }

@@ -3,6 +3,8 @@ using Autofac.Integration.WebApi;
 using RatesCalculator.DAL.Interfaces;
 using RatesCalculator.DAL.Persistence.DBContext;
 using RatesCalculator.DAL.Persistence.Repositories;
+using RatesCalculator.Services;
+using RatesCalculator.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +23,11 @@ namespace RatesCalculator.App_Start
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
             builder.RegisterType<RatesCalculatorContext>();
             builder.RegisterType<CustomerRepository>().As<ICustomerRepository>();
+            builder.RegisterType<AgreementRepository>().As<IAgreementRepository>();
+            builder.RegisterType<RatesCalculationSerivce>().As<IRatesCalculationSerivce>();
+
+            builder.RegisterType<ChangedRateImpactEvaluator>().As<IChangedRateImpactEvaluator>();
+            builder.RegisterType<RatesCalculationSerivce>().As<IRatesCalculationSerivce>();
 
             var container = builder.Build();
             var resolver = new AutofacWebApiDependencyResolver(container);

@@ -18,9 +18,9 @@
 
             var agreements = new List<Agreement>
             {
-                new Agreement { Amount = 12000, BaseRateCode = BaseRateCode.VILIBOR3m, Margin = 1.6M, Duration = 60, CustomerID = 1 },
-                new Agreement { Amount = 8000, BaseRateCode = BaseRateCode.VILIBOR1y, Margin = 2.2M, Duration = 36, CustomerID = 2 },
-                new Agreement { Amount = 1000, BaseRateCode = BaseRateCode.VILIBOR6m, Margin = 1.85M, Duration = 24, CustomerID = 2 }
+                new Agreement {ID = 1, Amount = 12000, BaseRateCode = EBaseRateCode.VILIBOR3m, Margin = 1.6M, Duration = 60, CustomerID = 1 },
+                new Agreement { ID = 2, Amount = 8000, BaseRateCode = EBaseRateCode.VILIBOR1y, Margin = 2.2M, Duration = 36, CustomerID = 2 },
+                new Agreement { ID = 3, Amount = 1000, BaseRateCode = EBaseRateCode.VILIBOR6m, Margin = 1.85M, Duration = 24, CustomerID = 2 }
             };
 
             agreements.ForEach(s => context.Agreements.Add(s));

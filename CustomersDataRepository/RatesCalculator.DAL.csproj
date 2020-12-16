@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Enums\EBaseRateCode.cs" />
+    <Compile Include="Persistence\Repositories\AgreementRepository.cs" />
     <Compile Include="Persistence\Repositories\BaseRepository.cs" />
     <Compile Include="Persistence\Repositories\CustomerRepository.cs" />
     <Compile Include="Persistence\DBContext\RatesCalculatorInitializer.cs" />
