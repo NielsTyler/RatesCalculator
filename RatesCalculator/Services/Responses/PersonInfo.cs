@@ -1,6 +1,6 @@
 ﻿namespace RatesCalculator.Services.ResultModels
 {
-    using RatesCalculator.DAL.Models;
+    using RatesCalculator.DAL.Domain.Models;
     using System;
 
     public class PersonInfo

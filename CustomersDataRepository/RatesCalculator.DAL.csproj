@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Enums\EBaseRateCode.cs" />
+    <Compile Include="Domain\Enums\EBaseRateCode.cs" />
     <Compile Include="Persistence\Repositories\AgreementRepository.cs" />
     <Compile Include="Persistence\Repositories\BaseRepository.cs" />
     <Compile Include="Persistence\Repositories\CustomerRepository.cs" />
@@ -59,8 +59,8 @@
     <Compile Include="Persistence\DBContext\RatesCalculatorContext.cs" />
     <Compile Include="Interfaces\IAgreementRepository.cs" />
     <Compile Include="Interfaces\ICustomerRepository.cs" />
-    <Compile Include="Models\Agreement.cs" />
-    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Domain\Models\Agreement.cs" />
+    <Compile Include="Domain\Models\Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

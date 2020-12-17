@@ -1,6 +1,9 @@
 ﻿namespace RatesCalculator.Services.ResultModels
 {
-    using RatesCalculator.DAL.Models;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using RatesCalculator.DAL.Domain.Enums;
+    using RatesCalculator.DAL.Domain.Models;
 
     public class AgreementInfo
     {
@@ -12,6 +15,7 @@
             Duration = agreement.Duration;
         }
 
+        [JsonConverter(typeof(StringEnumConverter))]
         public EBaseRateCode BaseRateCode { get; set; }
 
         public decimal Amount { get; set; }

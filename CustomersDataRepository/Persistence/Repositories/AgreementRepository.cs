@@ -1,5 +1,5 @@
-﻿using RatesCalculator.DAL.Interfaces;
-using RatesCalculator.DAL.Models;
+﻿using RatesCalculator.DAL.Domain.Models;
+using RatesCalculator.DAL.Interfaces;
 using RatesCalculator.DAL.Persistence.DBContext;
 using RatesCalculator.DAL.Persistence.Repositories;
 using System;

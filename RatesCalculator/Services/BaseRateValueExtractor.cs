@@ -1,4 +1,4 @@
-﻿using RatesCalculator.DAL.Models;
+﻿using RatesCalculator.DAL.Domain.Enums;
 using RatesCalculator.Services.Helpers;
 using RatesCalculator.Services.Interfaces;
 using System;

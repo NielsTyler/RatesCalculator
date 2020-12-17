@@ -1,4 +1,4 @@
-﻿using RatesCalculator.DAL.Models;
+﻿using RatesCalculator.DAL.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

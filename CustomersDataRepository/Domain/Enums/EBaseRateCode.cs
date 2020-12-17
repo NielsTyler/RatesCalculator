@@ -1,4 +1,4 @@
-﻿namespace RatesCalculator.DAL.Models
+﻿namespace RatesCalculator.DAL.Domain.Enums
 {
     public enum EBaseRateCode
     {

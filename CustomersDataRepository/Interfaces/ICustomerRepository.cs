@@ -1,14 +1,10 @@
-﻿using RatesCalculator.DAL.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RatesCalculator.DAL.Interfaces
+﻿namespace RatesCalculator.DAL.Interfaces
 {
+    using RatesCalculator.DAL.Domain.Models;
+    using System.Collections.Generic;
+
     public interface ICustomerRepository
     {
-        List<Customer> List();        
+        List<Customer> List();
     }
 }

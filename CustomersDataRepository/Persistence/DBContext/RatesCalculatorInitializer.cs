@@ -1,6 +1,7 @@
 ﻿namespace RatesCalculator.DAL.Persistence.DBContext
 {
-    using RatesCalculator.DAL.Models;
+    using RatesCalculator.DAL.Domain.Enums;
+    using RatesCalculator.DAL.Domain.Models;
     using System.Collections.Generic;
 
     public class RatesCalculatorInitializer : System.Data.Entity.DropCreateDatabaseAlways<RatesCalculatorContext>

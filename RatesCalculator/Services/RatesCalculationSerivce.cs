@@ -1,5 +1,5 @@
-﻿using RatesCalculator.DAL.Interfaces;
-using RatesCalculator.DAL.Models;
+﻿using RatesCalculator.DAL.Domain.Enums;
+using RatesCalculator.DAL.Interfaces;
 using RatesCalculator.Services.Helpers;
 using RatesCalculator.Services.Interfaces;
 using RatesCalculator.Services.ResultModels;
