@@ -26,6 +26,7 @@ namespace RatesCalculator.App_Start
             builder.RegisterType<AgreementRepository>().As<IAgreementRepository>();
             builder.RegisterType<RatesCalculationSerivce>().As<IRatesCalculationSerivce>();
 
+            builder.RegisterType<BaseRateValueExtractor>().As<IBaseRateValueExtractor>();
             builder.RegisterType<ChangedRateImpactEvaluator>().As<IChangedRateImpactEvaluator>();
             builder.RegisterType<RatesCalculationSerivce>().As<IRatesCalculationSerivce>();
 

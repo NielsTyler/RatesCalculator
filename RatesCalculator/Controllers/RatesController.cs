@@ -30,15 +30,6 @@ namespace RatesCalculator.Controllers
             changedRateInfo = _ratesCalculationSerivce.GetNewRateCustomerDataAsync(agreementId, newBaseRateCode).Result;           
 
             return changedRateInfo;
-        }
-
-        //[HttpGet]
-        //public List<DAL.Models.Customer> GetAggrements()
-        //{
-        //    List<DAL.Models.Customer> lst = _customerRepository.List();
-        //    Console.WriteLine(lst.Count);
-
-        //    return lst;
-        //}
+        }        
     }
 }
