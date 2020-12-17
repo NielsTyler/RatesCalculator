@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RatesCalculator.ErrorHandling;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -22,6 +23,8 @@ namespace RatesCalculator
 
             var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
             config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
+
+            config.Filters.Add(new RCExceptionFilterAttribute());
         }
     }
 }

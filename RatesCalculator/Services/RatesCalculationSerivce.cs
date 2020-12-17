@@ -1,14 +1,17 @@
 ﻿using RatesCalculator.DAL.Domain.Enums;
 using RatesCalculator.DAL.Interfaces;
+using RatesCalculator.ErrorHandling;
 using RatesCalculator.Services.Helpers;
 using RatesCalculator.Services.Interfaces;
 using RatesCalculator.Services.ResultModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
+using System.Web.Http;
 using System.Xml.Linq;
 
 namespace RatesCalculator.Services
@@ -22,6 +25,11 @@ namespace RatesCalculator.Services
 
         public RatesCalculationSerivce(IChangedRateImpactEvaluator impactEvaluator, IAgreementRepository agreememtRepository, IBaseRateValueExtractor baseRateValueExtractor)
         {
+            if (agreememtRepository == null)
+            {
+                throw new ArgumentNullException("AgreememtRepository");
+            }
+
             _agreememtRepository = agreememtRepository;
             _impactEvaluator = impactEvaluator;
             _baseRateValueExtractor = baseRateValueExtractor;
@@ -35,6 +43,11 @@ namespace RatesCalculator.Services
             {
                 var agreement = _agreememtRepository.GetAgreementById(AgreementID);
 
+                if (agreement == null || agreement.Customer == null)
+                {
+                    throw new RCException(ErrorCode.DataNotFound, "Agreement not found");
+                }
+
                 decimal newBasicRateValue = _baseRateValueExtractor.RetrieveBasicRateValueAsync(newBaseRateCode).Result;                
                 decimal originalBasicRateValue = _baseRateValueExtractor.RetrieveBasicRateValueAsync(agreement.BaseRateCode).Result;
 
@@ -42,10 +55,8 @@ namespace RatesCalculator.Services
                 result.Person = new PersonInfo(agreement.Customer);
                 
                 result.OriginalInterestRate = _impactEvaluator.CalculateInterestRate(originalBasicRateValue, agreement.Margin);
-                result.NewInterestRateDelta = _impactEvaluator.CalculateInterestRate(newBasicRateValue, agreement.Margin);
-            }
-            //else
-            // Logger.Write("Parameters AgreementID can not contain empty value.");
+                result.NewInterestRate = _impactEvaluator.CalculateInterestRate(newBasicRateValue, agreement.Margin);
+            }            
 
             return result;
         }                   

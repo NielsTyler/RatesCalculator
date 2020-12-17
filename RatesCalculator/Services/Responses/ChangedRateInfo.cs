@@ -10,13 +10,13 @@
 
         public decimal OriginalInterestRate { get; set; }
 
-        public decimal NewInterestRateDelta { get; set; }
+        public decimal NewInterestRate { get; set; }
 
         public decimal InterestRateDelta
         {
             get
             {
-                return Math.Abs(NewInterestRateDelta - OriginalInterestRate);
+                return Math.Abs(NewInterestRate - OriginalInterestRate);
             }
         }
     }
