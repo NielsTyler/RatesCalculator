@@ -12,7 +12,7 @@ namespace RatesCalculator.ErrorHandling
     {
         public override void OnException(HttpActionExecutedContext context)
         {
-            var rcException = context.Exception.InnerException as RCException;
+            var rcException = context?.Exception?.InnerException as RCException;
             HttpStatusCode statusCode = HttpStatusCode.BadRequest;
 
             if (rcException != null)
