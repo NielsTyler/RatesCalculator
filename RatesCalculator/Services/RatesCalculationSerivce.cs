@@ -35,7 +35,7 @@ namespace RatesCalculator.Services
             _baseRateValueExtractor = baseRateValueExtractor;
         }
 
-        public async Task<ChangedRateInfo> GetNewRateCustomerDataAsync(Int64 AgreementID, EBaseRateCode newBaseRateCode)
+        public ChangedRateInfo GetNewRateCustomerData(Int64 AgreementID, EBaseRateCode newBaseRateCode)
         {
             ChangedRateInfo result = new ChangedRateInfo();
 

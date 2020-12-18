@@ -40,18 +40,9 @@ namespace RatesCalculator.Controllers
         {
             HttpStatusCode statusCode = HttpStatusCode.OK;
             ChangedRateInfo changedRateInfo = new ChangedRateInfo();
-
-            //TODO: Add parameters validation here
-
-            try
-            {                
-                changedRateInfo = _ratesCalculationSerivce.GetNewRateCustomerDataAsync(agreementId, newBaseRateCode).Result;
-            }
-            catch (RCException ex)
-            {
-                
-            }
-
+             
+            changedRateInfo = _ratesCalculationSerivce.GetNewRateCustomerData(agreementId, newBaseRateCode);
+            
             return this.Request.CreateResponse(statusCode, changedRateInfo);
         }
     }

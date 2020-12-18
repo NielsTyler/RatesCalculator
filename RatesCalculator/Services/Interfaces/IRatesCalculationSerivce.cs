@@ -7,6 +7,6 @@
 
     public interface IRatesCalculationSerivce
     {
-        Task<ChangedRateInfo> GetNewRateCustomerDataAsync(Int64 AgreementID, EBaseRateCode newBaseRateCode);
+        ChangedRateInfo GetNewRateCustomerData(Int64 AgreementID, EBaseRateCode newBaseRateCode);
     }
 }
